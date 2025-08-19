@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeeksforGeeks Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #2f8d46;
+            text-align: center;
+            border-bottom: 3px solid #2f8d46;
+            padding-bottom: 10px;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            color: #2f8d46;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #2f8d46;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        fieldset {
+            border: 2px solid #2f8d46;
+            border-radius: 4px;
+            margin: 10px 0;
+            padding: 15px;
+        }
+
+        legend {
+            color: #2f8d46;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        button[type="submit"] {
+            background-color: #2f8d46;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #1f6e33;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* Additional CSS for new layout */
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #2f8d46;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>GeeksforGeeks Survey Form</h1>
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="yours@gmail.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+
+        <div class="form-group">
+            <label for="role">Which option best describes you?</label>
+            <select id="role" name="role">
+                <option value="intern">Intern</option>
+                <option value="student">Student</option>
+                <option value="professional">Professional</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Would you recommend GeeksforGeeks to a friend?</label>
+            <div class="radio-group">
+                <div>
+                    <input type="radio" id="yes" name="recommend" value="Yes">
+                    <label for="yes">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="no" name="recommend" value="No">
+                    <label for="no">No</label>
+                </div>
+                <div>
+                    <input type="radio" id="maybe" name="recommend" value="Maybe">
+                    <label for="maybe">Maybe</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Languages and Frameworks known (Check all that apply):</label>
+            <div class="checkbox-group">
+                <div>
+                    <input type="checkbox" id="c" name="language" value="C">
+                    <label for="c">C</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="cpp" name="language" value="C++">
+                    <label for="cpp">C++</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="java" name="language" value="Java">
+                    <label for="java">Java</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="python" name="language" value="Python">
+                    <label for="python">Python</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="javascript" name="language" value="JavaScript">
+                    <label for="javascript">JavaScript</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="react" name="language" value="React">
+                    <label for="react">React</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="angular" name="language" value="Angular">
+                    <label for="angular">Angular</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="django" name="language" value="Django">
+                    <label for="django">Django</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="spring" name="language" value="Spring">
+                    <label for="spring">Spring</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Any comments or suggestions:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments here"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
